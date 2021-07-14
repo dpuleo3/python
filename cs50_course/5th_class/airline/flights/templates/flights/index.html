@@ -1,0 +1,14 @@
+{% extends "fligths/layout.html" %}
+
+{% block body %}
+    <h1>Fligths</h1>
+    <ul>
+        {% for flights in flights %}
+            <li>
+                <a href="{% url 'flight' flight.id %}">
+                Fligth {{ flight.id }}: to {{ flight.destination }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
